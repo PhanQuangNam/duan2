@@ -1,0 +1,474 @@
+<!--<div style="background-color:azure">-->
+<!--<app-slide></app-slide>-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />-->
+<!--<link href="/../assets/css/web/main.css" rel="stylesheet" type="text/css" />-->
+<!--<link href="/../assets/css/web/update.scss.css" rel="stylesheet" type="text/css"/>-->
+<!--<div id="site-content" >-->
+<!--    <div id="main">-->
+<!--        <section class="">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="megamenu-right col-md-9 col-md-push-3">-->
+<!--                        <div class="row">-->
+<!--                            <section class="section-products">-->
+<!--                                <div class="section-title col-xs-12">-->
+<!--                                    <h2 class="section-title-heading"><a href="/" >Sản phẩm nổi bật</a></h2><hr color="red" width="100%">-->
+<!--                                </div>-->
+<!--                                <div class="gridsp ">-->
+<!--                                    <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let product of products | slice: (page-1) * pageSize:(page-1) * pageSize + pageSize; index as i">-->
+<!--                                        <div class="product_item">-->
+<!--                                            <div class="product_item_form">-->
+<!--                                            <div class="product-gird">-->
+<!--                                            <div class="men-thumb-item">-->
+<!--                                                <img src="{{product.img1}}" alt="">-->
+<!--                                                  <div class="men-cart-pro">-->
+<!--                                                    <div class="inner-men-cart-pro">-->
+<!--                                                      <a routerLink="" class="link-product-add-cart">Quick View</a>-->
+<!--                                                    </div>-->
+<!--                                                  </div>-->
+<!--                                              </div>-->
+<!--                                            <h3 class="product-name text2line"><a href="" >{{product.name}}</a></h3>-->
+<!--                                            <span class="product-price product-item-price price-box">-->
+<!--                                                <b class=" productminprice">-->
+<!--                                                    <span class="price">{{product.price1}} vnđ</span>-->
+<!--                                                </b>-->
+<!--                                            </span>-->
+<!--                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-1168929" enctype="multipart/form-data">-->
+<!--                                                <div class="product-action-btn">-->
+<!--                                                    <input type="hidden" name="variantId" value="1815313" />-->
+<!--                                                    <button class="product-action addtocart add_to_cart btn btn-lg btn-hai-40" type="button" title="Thêm vào giỏ hàng">-->
+<!--                                                        <span class="icon-cart-style"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>	ADD TO CARD-->
+<!--                                                    </button>-->
+<!--                                                </div>-->
+<!--                                            </form>-->
+<!--                                            </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </section>-->
+<!--                        </div>-->
+<!--                        <div class="container-fluid " *ngIf ="products">-->
+<!--                            <div class="row d-flex justify-content-end">-->
+<!--                              <ngb-pagination-->
+<!--                                [(page)]="page"-->
+<!--                                [pageSize]="pageSize"-->
+<!--                                [collectionSize]="products.length">-->
+<!--                              </ngb-pagination>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="my-5">-->
+<!--                            <img src="assets/img/banner1.jpg"  width="100%" height="100%" alt="Responsive image">-->
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                            <section class="section-products">-->
+<!--                                <div class="section-title col-xs-12">-->
+<!--                                    <h2 class="section-title-heading"><a href="" >Sản phẩm bán chạy</a></h2><hr color="red" width="100%">-->
+<!--                                </div>-->
+<!--                                <div class="gridsp">-->
+<!--                                    <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let product of products1 | slice: (page-1) * pageSize:(page-1) * pageSize + pageSize ;index as i">-->
+<!--                                        <div class="product_item">-->
+<!--                                            <div class="product_item_form">-->
+<!--                                            <div class="product-gird">-->
+<!--                                            <div class="men-thumb-item">-->
+<!--                                                <img src="{{product.img1}}" alt="">-->
+<!--                                                  <div class="men-cart-pro">-->
+<!--                                                    <div class="inner-men-cart-pro">-->
+<!--                                                      <a routerLink="" class="link-product-add-cart">Quick View</a>-->
+<!--                                                    </div>-->
+<!--                                                  </div>-->
+<!--                                              </div>-->
+<!--                                            <h3 class="product-name text2line"><a href="" >{{product.name}}</a></h3>-->
+<!--                                            <span class="product-price product-item-price price-box">-->
+<!--                                                <b class=" productminprice">-->
+<!--                                                    <span class="price">{{product.price1}} vnđ</span>-->
+<!--                                                </b>-->
+<!--                                            </span>-->
+<!--                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-1168929" enctype="multipart/form-data">-->
+<!--                                                <div class="product-action-btn">-->
+<!--                                                    <input type="hidden" name="variantId" value="1815313" />-->
+<!--                                                    <button class="product-action addtocart add_to_cart btn btn-lg btn-hai-40" type="button" title="Thêm vào giỏ hàng">-->
+<!--                                                        <span class="icon-cart-style"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>	ADD TO CARD-->
+<!--                                                    </button>-->
+<!--                                                </div>-->
+<!--                                            </form>-->
+<!--                                            </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </section>-->
+<!--                        </div>-->
+<!--                        <div class="container-fluid " *ngIf ="products1">-->
+<!--                            <div class="row d-flex justify-content-end">-->
+<!--                              <ngb-pagination-->
+<!--                                [(page)]="page"-->
+<!--                                [pageSize]="pageSize"-->
+<!--                                [collectionSize]="products1.length">-->
+<!--                              </ngb-pagination>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                    <div class="megamenu-left col-md-3 col-md-pull-9">-->
+<!--                        <div class="cd-dropdown-wrapper ">-->
+<!--                            <nav class="cd-dropdown dropdown-is-active list_menu hidden-xs hidden-sm">-->
+<!--                            <div class="dropdown-content-title"><h2>DANH MỤC SẢN PHẨM</h2></div>-->
+<!--                                <ul class="ul_menu">-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">ÁO CÂU LẠC BỘ</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">ÁO BÓNG ĐÁ KHÔNG LOGO</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">ÁO ĐỘI TUYỂN QUỐC GIA</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">GIÀY BÓNG ĐÁ</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">ÁO BÓNG ĐÁ DÀI TAY</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">ÁO KHOÁC BÓNG ĐÁ</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">ÁO BÓNg ĐÁ TRẺ EM</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav_item">-->
+<!--                                        <a href="">PHỤ KIỆN BÓNG ĐÁ</a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </nav>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; <div class="widget-sidebar-item filter">-->
+<!--                                <h2 class="widget-sidebar-name">BỘ LỌC SẢN PHẨM</h2>-->
+<!--                                <h4>Nhà sản xuất</h4>-->
+<!--                                <ul class="widget-sidebar-list">-->
+<!--                                    <li><a href="/vendors?query=Adidas" title="Adidas">Adidas</a></li>-->
+<!--                                    <li><a href="/vendors?query=Antsir" title="Antsir">Antsir</a></li>-->
+<!--                                    <li><a href="/vendors?query=ARYCA" title="ARYCA">ARYCA</a></li>-->
+<!--                                    <li><a href="/vendors?query=BAGUB" title="BAGUB">BAGUB</a></li>-->
+<!--                                    <li><a href="/vendors?query=Climacool" title="Climacool">Climacool</a></li>-->
+<!--                                    <li><a href="/vendors?query=Codad" title="Codad">Codad</a></li>-->
+<!--                                    <li><a href="/vendors?query=JOOLA%20FALCON" title="JOOLA FALCON">JOOLA FALCON</a></li>-->
+<!--                                    <li><a href="/vendors?query=Kathmandu" title="Kathmandu">Kathmandu</a></li>-->
+<!--                                    <li><a href="/vendors?query=Kawa" title="Kawa">Kawa</a></li>-->
+<!--                                    <li><a href="/vendors?query=KAWASAKI" title="KAWASAKI">KAWASAKI</a></li>-->
+<!--                                </ul>-->
+<!--                        </div> &ndash;&gt;-->
+<!--                        <div class="widget-sidebar-item product">-->
+<!--                            <a href="" title="Sản phẩm nổi bật"><h2 class="widget-sidebar-name">Sản phẩm nổi bật</h2></a>-->
+<!--                            <div class="product_item">-->
+<!--                                <div class="product_item_form">-->
+<!--                                    <div class="product-action-grid">-->
+<!--                                        <a href="" class="button_wh_40 btn_view right-to quick-view">-->
+<!--                                            <i class="icon-magnifier-add icons fa fa-eye"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="product-gird">-->
+<!--                                        <div class="product-thumbnail display_flex">-->
+<!--                                            <a class="product-img" href="" >-->
+<!--                                                <img class="lazyload" src="">-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <h3 class="product-name text2line"><a href="" >Giày đá bóng Kawa</a></h3>-->
+<!--                                        <span class="product-price product-item-price price-box">-->
+<!--                                            <b class=" productminprice">-->
+<!--                                                <span class="price">560.000₫</span>-->
+<!--                                            </b>-->
+<!--                                        </span>-->
+<!--                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-1168929" enctype="multipart/form-data">-->
+<!--                                            <div class="product-action-btn">-->
+<!--                                                <input type="hidden" name="variantId" value="1815313" />-->
+<!--                                                <button class="product-action addtocart add_to_cart btn btn-lg btn-hai-40" type="button" title="Thêm vào giỏ hàng">-->
+<!--                                                    <span class="icon-cart-style"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>	Mua hàng-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div id="bw-statistics"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </section>-->
+<!--        <div class="py-3">-->
+<!--            <img src="assets/img/banner4.png"  width="100%" height="70%" alt="Responsive image">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--    <div class="main">-->
+<!--      <div class="container border border-dark">-->
+<!--        <div class="row">-->
+<!--          <div class="col-6">-->
+<!--            <h2 class=""><span>Tin tức</span></h2>-->
+<!--          </div>-->
+<!--          <div class="col-6 text-right mt-5">-->
+<!--            <a href=""><span>Xem tất cả</span></a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--          <div class="col-4 card border border-0" style="background-color: azure">-->
+<!--            <img src="assets/img/banner4.jpg" class="card-img-top py-2" height="150px" alt="...">-->
+<!--            <div class="card-body">-->
+<!--              <h5 class="card-title">Card title</h5>-->
+<!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.-->
+<!--                This content is a little bit longer.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-4 card border border-0" style="background-color: azure">-->
+<!--            <img src="assets/img/banner2.jpg" class="card-img-top py-2" height="150px" alt="...">-->
+<!--            <div class="card-body">-->
+<!--              <h5 class="card-title">Card title</h5>-->
+<!--              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-4">-->
+<!--            <div class="alert alert-primary" href="">-->
+<!--              <a href=""> A simple primary alert—check it out!</a>-->
+<!--            </div>-->
+<!--            <div class="alert alert-primary" href="">-->
+<!--              <a href=""> A simple primary alert—check it out!</a>-->
+<!--            </div>-->
+<!--            <div class="alert alert-primary" href="">-->
+<!--              <a href=""> A simple primary alert—check it out!</a>-->
+<!--            </div>-->
+<!--            <div class="alert alert-primary" href="">-->
+<!--              <a href=""> A simple primary alert—check it out!</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+<div style="background-color:azure">
+  <app-slide></app-slide>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="alert alert-primary">
+          <h3 class="text-center">Menu</h3>
+        </div>
+<!--        <div class="dropdown-content-title mb-2"><h3>Menu</h3></div>-->
+        <div class="border border-dark rounded">
+          <ul class="nav flex-column nav-tabs bg-dark ">
+            <li class="nav-item">
+              <a class="nav-link" href="/home/trangchu">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/home/gioithieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/home/sanpham">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tin tức</a>
+            </li>
+            <li class="nav_item">
+              <a class="nav-link" href="">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-3">
+          <div class="dropdown-content-title"><h3>Sản phẩm bán chạy</h3></div>
+          <hr style="color: red" width="100%">
+        </div>
+        <div class="product-men" *ngFor="let product of products2 | slice: (page-1) * pageSize:(page-1) * pageSize + pageSize; index as i">
+          <div class="men-pro-item simpleCart_shelfItem">
+            <div class="men-thumb-item">
+              <img src="{{product.img1}}" alt="" >
+              <!--                <img src="{{product.img2}}" alt="" class="pro-image-back">-->
+              <div class="men-cart-pro">
+                <div class="inner-men-cart-pro">
+                  <a href="single.html" class="link-product-add-cart">Quick View</a>
+                </div>
+              </div>
+              <span class="product-new-top">Size</span>
+            </div>
+            <div class="item-info-product ">
+              <h4><a href="single.html">{{product.name}}</a></h4>
+              <div class="info-product-price">
+                <span class="item_price">{{product.price1}} vnđ</span><br/>
+                <!--                  <del>${{product.price2}}</del>-->
+              </div>
+              <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                <form action="#" method="post">
+                  <fieldset>
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="add" value="1" />
+                    <input type="hidden" name="business" value=" " />
+                    <input type="hidden" name="item_name" value="{{product.name}}" />
+                    <input type="hidden" name="amount" value="{{product.price1}}" />
+                    <input type="hidden" name="discount_amount" value="{{product.price2}}" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="hidden" name="return" value=" " />
+                    <input type="hidden" name="cancel_return" value=" " />
+                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9" >
+        <h2 class="section-title-heading"><a href="/" >Sản phẩm nổi bật</a></h2><hr color="red" width="100%">
+        <div class="row" >
+          <div class="col-md-4 product-men" *ngFor="let product of products | slice: (page-1) * pageSize:(page-1) * pageSize + pageSize; index as i">
+            <div class="men-pro-item simpleCart_shelfItem">
+              <div class="men-thumb-item">
+                <img src="{{product.img1}}" alt="" >
+<!--                <img src="{{product.img2}}" alt="" class="pro-image-back">-->
+                <div class="men-cart-pro">
+                  <div class="inner-men-cart-pro">
+                    <a href="/thongtinsanpham/{{product.id}}" class="link-product-add-cart">Quick View</a>
+                  </div>
+                </div>
+                <span class="product-new-top">Size</span>
+              </div>
+              <div class="item-info-product ">
+                <h4><a href="/thongtinsanpham/{{product.id}}">{{product.name}}</a></h4>
+                <div class="info-product-price">
+                  <span class="item_price">{{product.price1}} vnđ</span><br/>
+<!--                  <del>${{product.price2}}</del>-->
+                </div>
+                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                  <form action="#" method="post">
+                    <fieldset>
+                      <input type="hidden" name="cmd" value="_cart" />
+                      <input type="hidden" name="add" value="1" />
+                      <input type="hidden" name="business" value=" " />
+                      <input type="hidden" name="item_name" value="{{product.name}}" />
+                      <input type="hidden" name="amount" value="{{product.price1}}" />
+                      <input type="hidden" name="discount_amount" value="{{product.price2}}" />
+                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="return" value=" " />
+                      <input type="hidden" name="cancel_return" value=" " />
+                      <input type="submit" name="submit" value="Add to cart" class="button" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid mt-3" *ngIf ="products">
+          <div class="row d-flex justify-content-end">
+            <ngb-pagination
+              [(page)]="page"
+              [pageSize]="pageSize"
+              [collectionSize]="products1.length">
+            </ngb-pagination>
+          </div>
+        </div>
+        <div class="py-3">
+          <img src="assets/img/banner1.jpg"  width="100%" height="100%" alt="Responsive image">
+        </div>
+        <h2 class="section-title-heading"><a href="/" >Sản phẩm mới</a></h2><hr color="red" width="100%">
+        <div class="row" >
+          <div class="col-md-4 product-men" *ngFor="let product of products1 | slice: (page1-1) * pageSize1:(page1-1) * pageSize1 + pageSize1; index as i">
+            <div class="men-pro-item simpleCart_shelfItem">
+              <div class="men-thumb-item">
+                <img src="{{product.img1}}" alt="" class="pro-image-front">
+                <img src="{{product.img2}}" alt="" class="pro-image-back">
+                <div class="men-cart-pro">
+                  <div class="inner-men-cart-pro">
+                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                  </div>
+                </div>
+                <span class="product-new-top">Size</span>
+              </div>
+              <div class="item-info-product ">
+                <h4><a href="single.html">{{product.name}}</a></h4>
+                <div class="info-product-price">
+                  <span class="item_price">{{product.price1}} vnđ</span><br/>
+<!--                  <del>${{product.price2}}</del>-->
+                </div>
+                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                  <form action="#" method="post">
+                    <fieldset>
+                      <input type="hidden" name="cmd" value="_cart" />
+                      <input type="hidden" name="add" value="1" />
+                      <input type="hidden" name="business" value=" " />
+                      <input type="hidden" name="item_name" value="{{product.name}}" />
+                      <input type="hidden" name="amount" value="{{product.price1}}" />
+                      <input type="hidden" name="discount_amount" value="{{product.price2}}" />
+                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="return" value=" " />
+                      <input type="hidden" name="cancel_return" value=" " />
+                      <input type="submit" name="submit" value="Add to cart" class="button" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+        <div class="container-fluid mt-3" *ngIf ="products1">
+          <div class="row d-flex justify-content-end">
+            <ngb-pagination
+              [(page)]="page1"
+              [pageSize]="pageSize1"
+              [collectionSize]="products1.length">
+            </ngb-pagination>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+    <div class="py-3">
+      <img src="assets/img/banner4.png"  width="100%" height="70%" alt="Responsive image">
+    </div>
+    <div class="container border border-dark">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="mt-2"><span>Tin tức</span></h2>
+        </div>
+        <div class="col-6 text-right mt-3">
+          <a href=""><span>Xem tất cả -></span></a>
+        </div>
+
+      </div>
+      <hr color="red">
+      <div class="row">
+        <div class="col-4 card border border-0" style="background-color: azure">
+          <img src="assets/img/banner4.jpg" class="card-img-top py-2" height="150px" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+              This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="col-4 card border border-0" style="background-color: azure">
+          <img src="assets/img/banner2.jpg" class="card-img-top py-2" height="150px" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="alert alert-primary" href="">
+            <a href=""> A simple primary alert—check it out!</a>
+          </div>
+          <div class="alert alert-primary" href="">
+            <a href=""> A simple primary alert—check it out!</a>
+          </div>
+          <div class="alert alert-primary" href="">
+            <a href=""> A simple primary alert—check it out!</a>
+          </div>
+          <div class="alert alert-primary" href="">
+            <a href=""> A simple primary alert—check it out!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
